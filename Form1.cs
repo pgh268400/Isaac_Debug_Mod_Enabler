@@ -117,13 +117,15 @@ namespace IsaacDebugConsoleEnabler
             {
                 //settings.ini 파일 생성
                 File.Create(settings_file_path).Close();
-                FileIniDataParser parser = new FileIniDataParser();
-                IniData data = parser.ReadFile(settings_file_path);
-
-                data["Settings"]["GamePath"] = textbox_game_path.Text;
-
-                parser.WriteFile(settings_file_path, data);
             }
+
+            FileIniDataParser parser = new FileIniDataParser();
+            IniData data = parser.ReadFile(settings_file_path);
+
+            data["Settings"]["GamePath"] = textbox_game_path.Text;
+
+            parser.WriteFile(settings_file_path, data);
+
         }
 
         private async void detect_game_path(object sender, EventArgs e)
