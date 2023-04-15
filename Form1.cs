@@ -125,5 +125,12 @@ namespace IsaacDebugConsoleEnabler
                 parser.WriteFile(settings_file_path, data);
             }
         }
+
+        private async void detect_game_path(object sender, EventArgs e)
+        {
+            string result = await dbg.search_file_all_dir_async("isaac-ng.exe");
+            textbox_game_path.Text = result;
+            MessageBox.Show("게임 경로를 자동으로 감지했습니다. 잘못되었다면 수동으로 설정해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

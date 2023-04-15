@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkbox_console = new System.Windows.Forms.CheckBox();
             this.checkbox_mod = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,11 +130,22 @@
             this.checkbox_mod.UseVisualStyleBackColor = true;
             this.checkbox_mod.Click += new System.EventHandler(this.checkbox_mod_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(25, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "경로 자동 감지";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.detect_game_path);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 273);
+            this.ClientSize = new System.Drawing.Size(358, 274);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_change_game_dir);
@@ -162,5 +174,6 @@
         private GroupBox groupBox1;
         private CheckBox checkbox_console;
         private CheckBox checkbox_mod;
+        private Button button1;
     }
 }
